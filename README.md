@@ -7,14 +7,14 @@ Instalamos la imagen de Ubuntu con la ultima versión con el comando:
 
 ``docker pull ubuntu``
 
-![punto1.1](Imagen1_1.png)
+![punto1.1](Imagenes/punto1_1.png)
 
 ### Instalamos LAMP en un contenedor con la iamgen Ubuntu
 Creamos un contenedor con la imagen de Ubuntu:
 
 ``docker run -p 5080:80 --name miubuntucontenedor httpd tail -f /dev/null``
 
-![punto1.2](Imagen1_2.png)
+![punto1.2](Imagenes/punto1_2.png)
 
 Luego accedemos a la terminal del contenedor **miubuntucontenedor** que hemos creado de la imagen Ubuntu:
 
@@ -38,7 +38,7 @@ Luego instalamos mysql con el siguiente comando:
 > [!IMPORTANT]
 > Cuando instalemos mysql nos va a pedir la contraseña del root, pero al no conocerlo tenemos  que salir de esa operación con Ctrl+C y luego ejecutar mariadb.
 
-![punto1.3](Imagen1_3.png)
+![punto1.3](Imagenes/punto1_3.png)
 
 Comando para iniciarlizar mariadb:
 
@@ -49,7 +49,7 @@ Luego volveremos a poner el comando ``mysql_secure_installation`` para instalarl
 > [!CAUTION]
 > Tendremos que seguir las instrucciones que apareceran de manera correcta para que el servidor se instale y no falle el root en el futuro.
 
-![punto1.4](Imagen1_4.png)
+![punto1.4](Imagenes/punto1_4.png)
 
 
 ## 2. Utiliza esta guía para instalar wordpress en el contenedor.
@@ -71,7 +71,7 @@ Creamos un sitio en Apache para Wordpress entrando en el archivo de configuraci�
 
 ``nano /etc/apache2/sites-available/wordpress.conf``
 
-![punto2.1](Imagenes/punto2_1.png)
+![punto2.1](Imagenes/punto2.1.png)
 
 Habilitamos el sitio con el siguiente comando:
 
