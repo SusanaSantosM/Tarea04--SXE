@@ -118,3 +118,19 @@ Luego vamos a modificar el archivo de configuración de wordpress:
 
 
 ## 3. Comprueba que puedes acceder a wordpress. 
+Vamos a comprobar si la instalación de wordpress tuvo éxito. En un navegador abrimos la página con el localhost y puerto del contenedor. http://10.0.9.143:5080 Vamos a configurar el wordpress añadiendo el título de la página, nombre de usuario, contraseña y un correo electrónico.
+
+![punto3.1](Imagenes/punto3_1.png)
+
+Una vez rellenado los datos, instalamos wordpress, aparecerá una imagen de confirmación.
+
+![punto3.2](Imagenes/punto3_2.png)
+
+Luego podremos ingresar a wordpress iniciando sesión en  http://10.0.9.143:5080/wp-login.php 
+
+![punto3.3](Imagenes/punto3_3.png)
+
+Luego de iniciar sesión ingresará en el panel de control de wordpress.
+
+![punto3.4](Imagenes/punto3_4.png)
+
