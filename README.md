@@ -148,3 +148,27 @@ Luego de iniciar sesión ingresará en el panel de control de wordpress.
 
 ![punto3.4](Imagenes/punto3_4.png)
 
+
+
+## OPCIONAL: Instala phpmyadmin
+Vamos a instalar phpmyadmin en el contenedor, para ello usamos los siguientes comandos:
+
+``apt install phpmyadmin``
+
+
+> [!NOTE]
+> Cuando se esté instalando phpmyadmin te permitira seleccionar el servidor web, el cual escogeremos a apache2.
+
+### Comprobación
+
+Una vez instalado el servidor vamos a ir al navegador y ponemos el IP y el puerto del contenedor junto con /phpmyadmin
+http://10.0.9.143:5080/phpmyadmin
+
+
+![punto4.1](Imagenes/punto4_1.png)
+
+Se deberá introducir el usuario y contraseña que se puso a la base de datos y podra acceder a su base.
+
+![punto4.2](Imagenes/punto4_2.png)
+
+
