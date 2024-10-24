@@ -5,9 +5,10 @@
 ### Descargamos la imagen Ubuntu en docker
 Instalamos la imagen de Ubuntu con la ultima versión con el comando:
 
-``docker pull ubuntu``
+``docker pull ubuntu:22.04``
 
 ![punto1.1](Imagenes/punto1_1.png)
+
 
 ### Instalamos LAMP en un contenedor con la iamgen Ubuntu
 Creamos un contenedor con la imagen de Ubuntu:
@@ -15,6 +16,8 @@ Creamos un contenedor con la imagen de Ubuntu:
 ``docker run -p 5080:80 --name miubuntucontenedor httpd tail -f /dev/null``
 
 ![punto1.2](Imagenes/punto1_2.png)
+
+
 
 Luego accedemos a la terminal del contenedor **miubuntucontenedor** que hemos creado de la imagen Ubuntu:
 
@@ -35,6 +38,7 @@ Luego instalamos mysql con el siguiente comando:
 ``mysql_secure_installation``
 
 
+
 > [!IMPORTANT]
 > Cuando instalemos mysql nos va a pedir la contraseña del root, pero al no conocerlo tenemos  que salir de esa operación con Ctrl+C y luego ejecutar mariadb.
 
@@ -46,10 +50,13 @@ Comando para iniciarlizar mariadb:
 
 Luego volveremos a poner el comando ``mysql_secure_installation`` para instalarlo.
 
+
+
 > [!CAUTION]
 > Tendremos que seguir las instrucciones que apareceran de manera correcta para que el servidor se instale y no falle el root en el futuro.
 
 ![punto1.4](Imagenes/punto1_4.png)
+
 
 
 ## 2. Utiliza esta guía para instalar wordpress en el contenedor.
@@ -59,7 +66,9 @@ Seguimos en la terminal del contenedor y descargamos php con los siguientes coma
 
 ``service apache2 restart``
 
+
 Una vez descargado php, vamos a instalar wordpress en el contenedor. Creamos el directorio de instalación y descargamos el archivo desde WordPress.org con los siguientes comandos:
+
 
 ``apt install curl``
 
@@ -67,11 +76,13 @@ Una vez descargado php, vamos a instalar wordpress en el contenedor. Creamos el 
 
 ``curl https://wordpress.org/latest.tar.gz | tar zx -C /srv/www``
 
+
 Creamos un sitio en Apache para Wordpress entrando en el archivo de configuración.
 
 ``nano /etc/apache2/sites-available/wordpress.conf``
 
 ![punto2.1](Imagenes/punto2.1.png)
+
 
 Habilitamos el sitio con el siguiente comando:
 
@@ -97,7 +108,9 @@ Vamos a crear una base con su user y la configuramos para usarla con wordpress.
 
 ![punto2.2](Imagenes/punto2_2.png)
 
+
 Una vez terminada la configuración de la base de datos, salos con ``quit``
+
 
 Ahora vamos a configurar wordpress para conectarlo con la base de datos, ingresamos los siguientes comandos:
 
@@ -115,6 +128,7 @@ Luego vamos a modificar el archivo de configuración de wordpress:
 
 
 ![punto2.3](Imagenes/punto2_3.png)
+
 
 
 ## 3. Comprueba que puedes acceder a wordpress. 
